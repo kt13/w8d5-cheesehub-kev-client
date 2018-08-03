@@ -1,4 +1,4 @@
-
+import {API_BASE_URL} from '../config';
 export const NEW_REQUEST = 'NEW_REQUEST';
 export const fetchCheesesRequest = () => ({
   type: NEW_REQUEST
@@ -19,7 +19,7 @@ export const fetchCheesesError = error => ({
 export const fetchCheeses = () => dispatch => {
   dispatch(fetchCheesesRequest());
   console.log('I\'m making a get request to the back-end');
-  return fetch('http://localhost:8080/api/cheeses')
+  return fetch(`${API_BASE_URL}/api/cheeses`)
     .then(res => {
       console.log(res);
       return res.json();

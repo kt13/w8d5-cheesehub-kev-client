@@ -1,0 +1,2 @@
+/* /index.html 200
+REACT_APP_API_BASE_URL="https://MY-APP-NAME.herokuapp.com/api" npm run build
